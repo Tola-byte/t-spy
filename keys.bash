@@ -1,6 +1,0 @@
-export consumer_key=VeOSlNGDSwkuBfCrvllKlkYTD
-export consumer_secret=bVR33x7CBKHOgdR413epBe9LUPQM8pEQCpcru4bARncWIroPgw
-export access_token='574873731-F4hHgMxVjL781vOF11K9RqrKbFo4NWFjZizz3a0Q'
-export access_token_secret=uGELiValMOyOgZ6USfu1RJuqDvZrxzX25JKpJNeNm11wO
-export twitterCallbackUrl=http://127.0.0.1:3000/twitter/accept
-export DATABASE_URL=postgres://lfawxqcuuoxccp:ead5e9e1632b166eb81aa03174cbf7a8884f40175121650212a86c6261b8af08@ec2-54-234-44-238.compute-1.amazonaws.com:5432/d7fvpk6ivshe4q
