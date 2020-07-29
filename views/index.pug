@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    script(data-ad-client='ca-pub-2211612205404779' async='' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    title Home page
+  body
+    h1 SITE UNDER CONSTRUCTION
+    i
+      | you can logot with twitter 
+      a(href='/logout') here
+      |  or view white list 
+      a(href='/white-list') here
+    if timeline
+      h3 USER TIMELINE
+      each tweet, index in timeline
+        if tweet.retweeted_status 
+          p(style="color:red") retweeted text 
+          p @#{tweet.user.screen_name} retweeted - #{tweet.retweeted_status.full_text}
+
+        else if tweet.is_quote_status
+          p(style="color:green") qouted messages
+          p @#{tweet.user.screen_name} - #{tweet.full_text}
+          p #{tweet.quoted_status.full_text}
+        else
+          if tweet.truncated
+            p(style="color:blue") normal truncated tweet
+            p #{tweet.full_text}
+            - var tweetUrl = tweet.entities.urls[0].expanded_url
+            iframe(src="#{tweetUrl}" frameborder="0")
+            a(href="#{link}") full_text(link)
+          else
+            p(style="color:grey") normal untruncated tweet
+            p #{tweet.full_text}
+    if mentions
+      h3 USER MENTIONS
+      each tweet in mentions
+        p
+          u: b @#{tweet.user.screen_name} tweeted:
+          p: i #{tweet.full_text}

@@ -1,0 +1,29 @@
+{
+  "name": "t-spy",
+  "version": "1.0.0",
+  "description": "Helping user to keep track of their friends",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msoladoye/t-spy.git"
+  },
+  "author": "msoladoye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msoladoye/t-spy/issues"
+  },
+  "homepage": "https://github.com/msoladoye/t-spy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-twitter": "^1.0.4",
+    "pg": "^8.3.0",
+    "pug": "^3.0.0",
+    "twit": "^2.2.11"
+  }
+}

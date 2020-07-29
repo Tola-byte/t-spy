@@ -1,0 +1,29 @@
+//- !!!5
+html(lang="en")
+
+    head
+        meta(charset="UTF-8")/
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        title="White List"
+    body
+        if diff
+            table
+                thead
+                    tr
+                        th SN
+                        th screen name
+                        th 
+                tbody
+                    each user, index in diff
+                        -var id = index 
+                        tr
+                            td= id+1
+                            td: a(href="#")= user
+                            if white_l.includes(user)
+                                td: a(href=`/white-list/remove/${user}`) remove from white list
+                            else
+                                td: a(href=`/white-list/add/${user}`) add to white list
+                            td: a(href=`/process/unfollow/${user}`) unfollow
+
+        if (white_l.length == 0)
+            h4 NO WHITE LISTED USER
